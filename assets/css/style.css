@@ -4,7 +4,7 @@
 
 /*setting of body and set main page background color with linear-gardient instead of default color white*/
 body {
-  font-size: 16px;
+  font-size: 20px;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
