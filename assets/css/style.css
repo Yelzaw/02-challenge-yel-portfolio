@@ -1,0 +1,230 @@
+* {
+  box-sizing: border-box;
+}
+
+/*setting of body and set main page background color with linear-gardient instead of default color white*/
+body {
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: flex-start;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+}
+
+/*Display arrangment of header section*/
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1%;
+}
+
+/*Tree and sky image as background image in header section*/
+.background-image {
+  background-image: url("../images/sky.jpg");  
+  height: 100px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/*Adjust arrangement of diplay of profile photo and name*/
+.profile {
+  display: flex;
+}
+
+/*Properties of profile name*/
+h1 {
+  font-size: 200%;
+  padding: 10px;
+  padding-top: 30px;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+  font-weight: bold;
+  color: darkgoldenrod;
+  text-shadow: black 1px 1px 5px;    
+}
+
+/*Setting for profile photo*/
+.photo {
+  width: 90px;
+  padding: 1px;  
+}
+
+/*When cursor is hover on profile photo, let a photo enlarge from original size*/
+.photo:hover {
+  position: relative;
+  top: 40px;
+  transform: scale(2);
+  z-index: 1;
+}
+
+/*Setting of contents in header section*/
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  min-width: 300px;
+}
+
+nav a {
+  color: whitesmoke;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/*When cursor is hover on contents, it will change the color*/
+nav a:hover {
+  color: brown;  
+}
+
+h2 {
+  margin: 2% 0;
+  font-size: 200%;
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  display: flex;
+  flex: 1 1 0;
+  padding: 20px;
+  margin: 1% auto;
+  margin-bottom: 20px;
+  margin-right: 20px;  
+  color: black;
+  font-weight: bold;
+}
+
+aside {
+  width: 25%;
+  border-right: 2px solid lightslategray;
+  opacity: 0.9;
+  font-size: 100%;
+}
+
+article {
+  width: 75%;
+  max-height: 100%;
+  padding-left: 10px;
+  justify-content: center;
+}
+/*Setting of image (screenshot of webpage in Projects section*/
+.images {
+  max-width: 100%;
+  position: relative;
+  border-style: solid;
+  border-width: 1px;
+  width: 46%;  
+  float: left;
+  margin: 10px;
+  font-weight: bold;
+}
+
+img {
+  display: inline-grid;
+  grid-template-columns: auto auto auto;
+  max-width: 100%;
+  height: auto;  
+}
+
+/*When cursor is hover on image, the image will enlarge and will show shadow*/
+.images:hover {
+  position: relative;
+  box-shadow: 0 0 5px lightskyblue;
+  transform: scale(1.1);
+  z-index: 4;
+}
+/*Setting of text box that showing project name at the bottom of project's image*/ 
+figcaption {
+  font-size: small;
+  background-color: bisque;
+  text-align: center;
+}
+
+/*Height setting for About-me section*/
+.about-me {
+  height: 200px;
+}
+
+/*Setting for Contact Me Section*/
+.contact-me {
+  display: flex;
+  font-weight: bold;
+  padding: 5px;
+  align-content: center;
+  align-items: center;
+  height: fit-content;    
+}
+
+.contact-me ul  {  
+  justify-content: space-around;  
+}
+
+/*Properties of the text (github & linkedin)*/
+.highlighter {  
+  color: black;
+  text-decoration: none;
+}
+
+/*When cursor over the text (github & linkedin), text color will change*/
+.highlighter:hover {
+  text-decoration: underline;
+  color: white;  
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 2%;
+  font-weight: bold;
+  color: black;
+}
+
+/*A responsive layout setting t0 adapts to viewport*/
+@media screen and (max-width: 768px) {
+  main, .contact-me ul, section {
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 150%;
+    padding-top: 10px;
+    vertical-align: middle;
+  }
+
+  .photo {
+    width: 95px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    text-align: right;
+    padding-right: 5px;
+  }
+  
+  aside {
+    width: 100%;
+    text-align: center;
+    border-right: none;    
+  }
+
+  article {    
+    width: 100%;
+    border-top: 2px solid lightslategray;
+    border-width: 100%;
+    padding-top: 10px;
+  }
+
+  .images {
+    width: 85%;
+  }
+
+  .contact-me ul li {
+    text-align: center;
+  }
+}
