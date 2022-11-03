@@ -138,7 +138,8 @@ img {
   position: relative;
   box-shadow: 0 0 5px black;
   transform: scale(1.1);
-  z-index: 4;
+  z-index: 4;  
+  filter: grayscale(50%);
 }
 /*Setting of text box that showing project name at the bottom of project's image*/ 
 figcaption {
@@ -221,6 +222,7 @@ footer {
     padding-top: 10px;
   }
 
+  /*Adjust the projects image*/
   .images {
     width: 85%;
   }
