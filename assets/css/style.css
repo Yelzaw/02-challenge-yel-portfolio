@@ -36,6 +36,8 @@ header {
   display: flex;
 }
 
+
+
 /*Properties of profile name*/
 h1 {
   font-size: 200%;
@@ -50,8 +52,22 @@ h1 {
 
 /*Setting for profile photo*/
 .photo {
-  width: 90px;
+  /*width: 90px;
   padding: 1px;  
+  display: inline;
+  margin: 0 auto;*/
+  transform: scale(2);
+  margin-left: 45px; /*centers the image*/
+  margin-top: 35px;
+  width: auto;
+}
+
+.circlecropper {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
 }
 
 /*When cursor is hover on profile photo, let a photo enlarge from original size*/
@@ -60,8 +76,17 @@ h1 {
   top: 40px;
   transform: scale(2);
   z-index: 1;
+  margin-left: 55px;
+  margin-top: 10px;
 }
-
+.circlecropper:hover {
+  width: 125px;
+  height: 125px;
+  position: relative;
+  top: 15px; 
+  overflow: hidden;
+  border-radius: 50%;
+}
 /*Setting of contents in header section*/
 nav ul {
   display: flex;
