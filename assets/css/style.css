@@ -224,10 +224,20 @@ footer {
     vertical-align: middle;
   }
 
-  .photo {
-    width: 95px;
+  .circlecropper {
+    width: 150px;
   }
-
+  .circlecropper:hover {
+    width: 180px;
+  }
+  .photo:hover {
+    position: relative;
+    top:70px;
+    left: 15px;
+    transform: scale(2.5);
+    z-index: 1;
+  }
+  
   nav ul {
     flex-direction: column;
     text-align: right;
