@@ -10,7 +10,8 @@ body {
   min-height: 100vh;
   justify-content: flex-start;
   font-family: Arial, Helvetica, sans-serif;
-  background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+  background-color: #363947;  
+  /* background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c); */
 }
 
 /*Display arrangment of header section*/
@@ -19,9 +20,11 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1%;
+  background-color: #363947;
+  
 }
 
-/*Tree and sky image as background image in header section*/
+/*Tree and sky image as background image in header section
 .background-image {
   background-image: url("../images/sky.jpg");  
   height: 100px;
@@ -29,7 +32,7 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-}
+}*/
 
 /*Adjust arrangement of diplay of profile photo and name*/
 .profile {
@@ -73,8 +76,9 @@ h1 {
 /*When cursor is hover on profile photo, let a photo enlarge from original size*/
 .photo:hover {
   position: relative;
-  top: 40px;
+  top: 30px;
   transform: scale(2);
+  transform-origin: center;
   z-index: 1;
   margin-left: 55px;
   margin-top: 10px;
@@ -82,10 +86,12 @@ h1 {
 .circlecropper:hover {
   width: 125px;
   height: 125px;
-  position: relative;
-  top: 15px; 
+  position: absolute;
+  top: 5px; 
+  left: 250px;
   overflow: hidden;
   border-radius: 50%;
+  transform-origin: center;
 }
 /*Setting of contents in header section*/
 nav ul {
@@ -95,7 +101,7 @@ nav ul {
 }
 
 nav a {
-  color: whitesmoke;
+  color: #fcfcfc;
   font-weight: bold;
   text-decoration: underline;
   padding: 20px;
@@ -103,7 +109,7 @@ nav a {
 
 /*When cursor is hover on contents, it will change the color*/
 nav a:hover {  
-  color: brown;
+  color: wheat;
   text-shadow: black 1px 1px 5px;
 }
 
@@ -123,7 +129,7 @@ section {
   margin: 1% auto;
   margin-bottom: 20px;
   margin-right: 20px;  
-  color: black;
+  color: #fcfcfc;
   font-weight: bold;
 }
 
@@ -169,7 +175,7 @@ img {
 /*Setting of text box that showing project name at the bottom of project's image*/ 
 figcaption {
   font-size: small;
-  background-color: bisque;
+  background-color:#363947;
   text-align: center;
 }
 
@@ -185,7 +191,7 @@ figcaption {
   padding: 5px;
   align-content: center;
   align-items: center;
-  height: fit-content;    
+  height: fit-content; 
 }
 
 .contact-me ul  {  
@@ -194,14 +200,14 @@ figcaption {
 
 /*Properties of the text (github & linkedin)*/
 .highlighter {  
-  color: black;
+  color: white;
   text-decoration: none;
 }
 
 /*When cursor over the text (github & linkedin), text color will change*/
 .highlighter:hover {
   text-decoration: underline;
-  color: white;  
+  color: wheat;
 }
 
 footer {
@@ -209,7 +215,7 @@ footer {
   justify-content: center;
   padding: 2%;
   font-weight: bold;
-  color: black;
+  color: #fcfcfc;
 }
 
 /*A responsive layout setting t0 adapts to viewport*/
@@ -228,7 +234,9 @@ footer {
     width: 150px;
   }
   .circlecropper:hover {
-    width: 180px;
+    width: 130px;
+    position:absolute;
+    left: 120px;
   }
   .photo:hover {
     position: relative;
