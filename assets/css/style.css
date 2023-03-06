@@ -144,7 +144,9 @@ article {
   width: 75%;
   max-height: 100%;
   padding-left: 10px;
-  justify-content: center;
+  justify-content: space-evenly;
+  line-height: 1.5;
+  font-size: medium;
 }
 /*Setting of image (screenshot of webpage) in Projects section*/
 .images {
